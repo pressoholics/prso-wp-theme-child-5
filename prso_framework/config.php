@@ -248,7 +248,7 @@ class PrsoThemeConfig {
 	* 
 	* The url for Google jQuery library, used in front end only
 	*/
-	protected $theme_google_jquery_url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
+	protected $theme_google_jquery_url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js';
 
  
 /******************************************************************
@@ -371,12 +371,10 @@ class PrsoThemeConfig {
 		'merged_path' 		=> '/javascripts/app.min.js',
 		'depends'			=> array( 'jquery' ),
 		'handles'			=> array( 
-			'modernizr', 'foundation-app',
-			'foundation-accordion', 'foundation-alerts', 'foundation-buttons', 'foundation-clearing', 'foundation-forms', 
-			'foundation-joyride', 'foundation-magellan', 'foundation-mediaQueryToggle', 'foundation-navigation', 'foundation-orbit', 
-			'foundation-reveal', 'foundation-tabs', 'foundation-tooltips', 'foundation-topbar', 'foundation-placeholder', 'jquery-cookie', 'jquery-offcanvas', 'jquery-event-move', 'jquery-event-swipe',
+			'modernizr', 'foundation-core', 'foundation-alerts', 'foundation-clearing', 'foundation-dropdown', 'foundation-joyride', 'foundation-magellan', 'foundation-orbit', 'foundation-reveal', 'foundation-tooltips', 'foundation-topbar', 'foundation-abide', 'foundation-interchange', 'foundation-offcanvas', 'foundation-accordion', 'foundation-tab', 'jquery-event-move', 'jquery-event-swipe', 'prso-theme-app'
 		)
-	);*/
+	);
+	*/
 	
 	/**
  	* $this->theme_script_merge_exceptions
@@ -477,6 +475,26 @@ class PrsoThemeConfig {
  	*
 	*/
 	//protected $theme_backstretch_script_args = array();
+	
+/******************************************************************
+ * 14. 	Waypoints script
+ *		
+ *****************************************************************/
+
+ 	/**
+ 	* $this->theme_waypoints_script_args
+ 	*
+ 	* NOTE :: Comment out to disable script OR leave empty to use defaults
+ 	*
+ 	* array(
+			'handle'		=>	'jquery-waypoints',
+			'script_cdn'	=>	'http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.2/waypoints.min.js',
+			'script'		=>	get_template_directory_uri() . '/javascripts/jquery/jquery.waypoints.min.js',
+			'version'		=>	'2.0.2'
+		);
+ 	*
+	*/
+	protected $theme_waypoints_script_args = array();
 
 /******************************************************************
  * 15. 	Theme Admin Page Options - IMPORTANT
