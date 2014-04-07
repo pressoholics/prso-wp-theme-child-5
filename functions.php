@@ -25,6 +25,12 @@ function prso_theme_localize() {
 	$obj_name	= 'prsoThemeLocalVars';
 	$data_array = array();
 	
+	//Cache ajax_url
+	$data_array['admin_ajax_url'] = admin_url( 'admin-ajax.php' );
+	
+	//Cache theme nonce
+	$data_array['_ajax_nonce'] = wp_create_nonce( PRSOTHEMEFRAMEWORK__DOMAIN );
+	
 	/** Cache data for localization **/
 	
 	
