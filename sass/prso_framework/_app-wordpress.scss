@@ -44,86 +44,18 @@ body {
    left: 0;
 }
 
-.mobile-nav-container{
-	float: left;
-	width: 80%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	background: none repeat scroll 0 0 #F2F2F2;
-	@include vendorize(box-shadow,-1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25) inset);  
-    @include vendorize(transform,translate3d(-100%, 0, 0));
-	@include vendorize(backface-visibility,hidden);
-    @include vendorize(perspective,1000);
-    @include vendorize(transform-origin,-100% 0 0);
+ul.off-canvas-list li a {
+    border-bottom: 1px solid #262626;
+    color: #CCCCCC;
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: block;
+    padding: 1rem;
+    transition: background 300ms ease 0s;
 }
 
-.active .mobile-nav-container{
-	display: block;
-    @include vendorize(transform,translate3d(0, 0, 0));
-	@include vendorize(backface-visibility,hidden);
-    @include vendorize(perspective,1000);
-}
-
-.active #content{
-	@include vendorize(transform,translate3d(80%, 0, 0));
-	@include vendorize(backface-visibility,hidden);
-    @include vendorize(perspective,1000);
-}
-
-.mobile-nav-container,
-#content{
-	-webkit-transition: -webkit-transform 500ms ease;
-    -moz-transition: -moz-transform 500ms ease;
-    -o-transition: -o-transform 500ms ease;
-    transition: transform 500ms ease;
-}
-
-#mobile-nav-action {
-	background: #000000;
-	.menu-action {
-		width: 40px;
-		margin: 5px 0;
-	}
-	.button.small {
-		padding: 7px 10px 8px;
-		margin: 0;
-	}
-}
-
-.mobile-nav-container {
-	.tabs.vertical {
-		li {
-			a {
-				border-bottom: 1px solid #F8F8F8;
-			}
-		}
-		li.active {
-			border-top: none;
-			border-left: none;
-		}
-		li ul {
-			li {
-				a.child-nav-item {
-					background: none;
-					border-left: 1px solid #E6E6E6;
-					border-top: 1px solid #E6E6E6;
-					color: #4D4D4D;
-				}
-			}
-			li.active {
-				a.child-nav-item {
-					border-top: none;
-					border-left: 3px solid #000000;
-					background: none;
-				}
-			}
-		}
-	}
-}
-
-.side-nav{
-	height: auto;
+.off-canvas-list li a:hover {
+	background-color: #242424;
 }
 
 ul.tabs.vertical {

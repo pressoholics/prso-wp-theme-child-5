@@ -145,6 +145,61 @@ Big thanks to Daniel Eden
 	-o-animation-name: bounce;
 	animation-name: bounce;
 }
+
+
+@-webkit-keyframes point-down {
+	0%, 100% {-webkit-transform: translateY(0);}
+	40% {-webkit-transform: translateY(30px);}
+}
+
+@-moz-keyframes point-down {
+	0%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(30px);}
+}
+
+@-o-keyframes point-down {
+	0%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(30px);}
+}
+@keyframes point-down {
+	0%, 100% {transform: translateY(0);}
+	40% {transform: translateY(30px);}
+}
+
+.point-down {
+	-webkit-animation-name: point-down;
+	-moz-animation-name: point-down;
+	-o-animation-name: point-down;
+	animation-name: point-down;
+}
+
+@-webkit-keyframes point-up {
+	0%, 100% {-webkit-transform: translateY(0);}
+	40% {-webkit-transform: translateY(-30px);}
+}
+
+@-moz-keyframes point-up {
+	0%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+}
+
+@-o-keyframes point-up {
+	0%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+}
+@keyframes point-up {
+	0%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+}
+
+.point-up {
+	-webkit-animation-name: point-up;
+	-moz-animation-name: point-up;
+	-o-animation-name: point-up;
+	animation-name: point-up;
+}
+
+
 @-webkit-keyframes tada {
 	0% {-webkit-transform: scale(1);}	
 	10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
