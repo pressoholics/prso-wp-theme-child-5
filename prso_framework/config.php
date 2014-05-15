@@ -51,9 +51,9 @@ class PrsoThemeConfig {
 	*  )
 	*/
  	protected $theme_thumbnail_settings = array(
- 		'default' => array(
- 			'width' 	=> 125,
- 			'height'	=> 125,
+ 		'thumbnail' => array(
+ 			'width' 	=> 150,
+ 			'height'	=> 150,
  			'crop'		=> true
  		),
 	 	'prso-orbit' => array(

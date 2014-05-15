@@ -7,6 +7,11 @@
 * @author	Ben Moody
 */
 
+//Make fontss look nice
+h1, h2, h3, h4, h5, h6, p, a {
+	@include vendorize( font-smoothing, antialiased );
+}
+
 /* layout */
 
 .more-link{
@@ -343,6 +348,19 @@ li.next{
 #sidebar1 .metadata,
 #sidebar1 .caption{
 	padding-bottom: 20px;
+}
+
+/* images */
+img {
+	&.size-thumbnail {
+		max-width: 150px;
+	}
+	&.size-medium {
+		max-width: 125px;
+	}
+	&.size-large {
+		max-width: 1024px;
+	}
 }
 
 /* widget styles */

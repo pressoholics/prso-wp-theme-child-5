@@ -38,3 +38,42 @@ Ex: @include rem(line-height, 25px);
 	width: 9999px;
 	right: 100%;
 }
+
+/* Default sprite locations */
+$sprites 	: sprite-map("sprites_72/*.png");
+
+
+/* E.G. @include get-sprite( "nav-tab", $sprites ); */
+@mixin get-sprite($name, $sprites) {
+	background-image: sprite-url($sprites);
+	background-position: sprite-position($sprites, $name);
+	background-repeat: no-repeat;
+}
+
+/* Comment out and use other mixin below to compile final css with retina */
+$sprites2x	: "";
+@mixin get-retina-sprites($name, $sprites, $sprites2x) {
+	background-image: sprite-url($sprites);
+	background-position: sprite-position($sprites, $name);
+	background-repeat: no-repeat;
+}
+
+
+/* E.G. @include get-retina-sprites( "nav-tab", $sprites, $sprites2x ); */
+/*
+$sprites2x	: sprite-map("sprites_192/*.png");
+@import "compass/css3/background-size";
+@mixin get-retina-sprites($name, $sprites, $sprites2x) {
+  background-image: sprite-url($sprites);
+  background-position: sprite-position($sprites, $name);
+  background-repeat: no-repeat;
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5) {
+    & {
+      $pos: sprite-position($sprites2x, $name);
+      background-image: sprite-url($sprites2x);
+      background-position: nth($pos, 1) nth($pos, 2) / 2;
+      @include background-size(ceil(image-width(sprite-path($sprites2x)) / 2) auto);
+    }
+  }
+}
+*/
